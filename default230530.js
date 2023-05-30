@@ -59,13 +59,58 @@
 //document.write(text.toUpperCase()+"</br>");
 //document.write(text.toLowerCase()+"</br>");
 
-var text1 = 'h1';
-var text2 = 'bye';
-var text3 = text1.concat(text2);
-//var text4 = text1 + text2;
-var text4 = "hello";
-document.write(text3 + "<br/>");
-document.write(text4 + "<br/>");
+//var text1 = 'h1';
+//var text2 = 'bye';
+//var text3 = text1.concat(text2);
+////var text4 = text1 + text2;
+//var text4 = "hello";
+//document.write(text3 + "<br/>");
+//document.write(text4 + "<br/>");
+//
+//var result = text4.slice(0,2);
+//document.write(result+"<br/>");
 
-var result = text4.slice(0,2);
-document.write(result+"<br/>");
+//var numStr = "20";
+//console.log(typeof numStr);
+//numStr = numStr.toString();
+//console.log(typeof numStr);
+//
+//var number = 20;
+//console.log(typeof number);
+//number = toString(20);
+//console.log(typeof number);
+
+//var x = 2.45345;
+//console.log(x.toFixed(1));
+//console.log(x.toFixed(2));
+//
+//console.log(x.toPrecision(1), typeof x.toPrecision(1));
+//console.log(x.toPrecision(2));
+//
+//console.log(Number(true));
+//console.log(Number(false));
+//console.log(Number(" 10"));
+//console.log(Number("10.25"));
+
+//var num1 = parseInt(prompt("Enter first number: "));
+//var num2 = parseInt(prompt("Enter second number: "));
+var lineBreak = "</br>";
+//
+//var result = num1 + num2;
+//document.write("the sum : "+ result + lineBreak);
+//
+//result = num1 - num2;
+//document.write("the sub :" + result + lineBreak);
+//
+//result = num1 * num2;
+//document.write("the mul :" + result + lineBreak);
+//
+//result = num1 / num2;
+//document.write("the div :" + result + lineBreak);
+//
+//result = num1 % num2;
+//document.write("the rem :" + result + lineBreak);
+
+var base = parseInt(prompt("밑변"))
+var height = parseInt(prompt("높이"))
+document.write("삼각형 넓이 :" + base*height*0.5 + lineBreak);
