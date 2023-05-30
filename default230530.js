@@ -37,15 +37,35 @@
 //document.write("나이: "+age+lineBrake);
 //document.write("학점: "+cgpa+lineBrake);
 
-var lastName = '홍';
-var firstName = '길동';
-var fullName = lastName + firstName;
+//var lastName = '홍';
+//var firstName = '길동';
+//var fullName = lastName + firstName;
+//
+//console.log(fullName);
+//console.log("Today"+'good');
+//console.log('My name is'+fullName);
+//
+//var num1 = 20;
+//var num2 = 30;
+//console.log(num1+num2)
+//console.log(''+num1+num2)
 
-console.log(fullName);
-console.log("Today"+'good');
-console.log('My name is'+fullName);
+//var text = prompt("Enter your name:")
+//document.write("Your name:" +text+ "</br>");
+//
+//var len = text.length;
+//document.write("number of characters:"+len+"</br>");
+//document.write(text.charAt(0)+"</br>");
+//document.write(text.toUpperCase()+"</br>");
+//document.write(text.toLowerCase()+"</br>");
 
-var num1 = 20;
-var num2 = 30;
-console.log(num1+num2)
-console.log(''+num1+num2)
+var text1 = 'h1';
+var text2 = 'bye';
+var text3 = text1.concat(text2);
+//var text4 = text1 + text2;
+var text4 = "hello";
+document.write(text3 + "<br/>");
+document.write(text4 + "<br/>");
+
+var result = text4.slice(0,2);
+document.write(result+"<br/>");
