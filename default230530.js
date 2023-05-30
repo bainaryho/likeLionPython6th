@@ -28,11 +28,24 @@
 //person = null;
 //console.log(typeof person, person);
 
-var name = '이승훈';
-var age = 29;
-var cgpa = 3.92;
-var lineBrake = '<br/>'
+//var name = '이승훈';
+//var age = 29;
+//var cgpa = 3.92;
+//var lineBrake = '<br/>'
+//
+//document.write("이름: "+name+lineBrake);
+//document.write("나이: "+age+lineBrake);
+//document.write("학점: "+cgpa+lineBrake);
 
-document.write("이름: "+name+lineBrake);
-document.write("나이: "+age+lineBrake);
-document.write("학점: "+cgpa+lineBrake);
+var lastName = '홍';
+var firstName = '길동';
+var fullName = lastName + firstName;
+
+console.log(fullName);
+console.log("Today"+'good');
+console.log('My name is'+fullName);
+
+var num1 = 20;
+var num2 = 30;
+console.log(num1+num2)
+console.log(''+num1+num2)
