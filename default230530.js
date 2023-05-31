@@ -111,6 +111,33 @@ var lineBreak = "</br>";
 //result = num1 % num2;
 //document.write("the rem :" + result + lineBreak);
 
-var base = parseInt(prompt("밑변"))
-var height = parseInt(prompt("높이"))
-document.write("삼각형 넓이 :" + base*height*0.5 + lineBreak);
+//var base = parseInt(prompt("밑변"))
+//var height = parseInt(prompt("높이"))
+//document.write("삼각형 넓이 :" + base*height*0.5 + lineBreak);
+
+//var cels = parseFloat(prompt("섭씨 입력: "));
+//var farn = cels * (9/5)+32;
+//document.write("화씨: " + farn);
+
+//var num1 = parseInt(prompt('숫자1 :'));
+//var num2 = parseInt(prompt('숫자2 :'));
+//if (num1 > num2){
+//    console.log('큰 수는 : ' + num1);
+//}
+//else if (num1 < num2){
+//    console.log('큰 수는 : ' + num2);
+//}
+//else{
+//    console.log('같은 수');
+//}
+
+//var letter = prompt("Enter a letter : ");
+//
+//letter = letter.toLowerCase();
+//
+//if(letter == 'a' || letter == 'e' || letter == 'i' || letter == 'o' || letter == 'u') {
+//    console.log('Vowel');
+//} else {
+//    console.log('Consonant');
+//}
+
