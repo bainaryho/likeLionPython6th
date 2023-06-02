@@ -8,25 +8,8 @@
     <title>My Note</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <style>
-        footer{
-            width: 100nw;
-            position: auto;
-            bottom:0;
-            text-align: center;
-        }
-        #addList{
-
-        }
-        h1{
-            text-align: center;
-        }
-        .list-group-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href = "css/default.css">
+    <script src="js/default.js"></script>
 </head>
 <body>
 <header>
@@ -72,50 +55,7 @@
             Copyright 2023 MyNote.
     </div>
 </footer>
-
-
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-<script>
-
-<!--    function getTodo(){-->
-<!--        var note = localStorage.getItem('todo');-->
-<!--        document.getElementById('todoList').innerHTML = note;-->
-<!--    }-->
-    function saveTodo(){
-        var todo = document.getElementById("todoList").innerHTML;
-        localStorage.setItem('todo', todo);
-        <!--localStorage.setItem(키,값)-->
-    }
-
-    function removeTodo(text){
-        console.log('remove Todo');
-        localStorage.removeItem('todo');
-        var removeOne = text.target.parentElement;
-        removeOne.remove();
-    }
-    function allClear(){
-        console.log('All CLEAR');
-        localStorage.clear();
-        document.getElementById('todoList').innerHTML = '';
-        document.getElementById('addTodoList').innerHTML = '';
-    }
-    function addTodo() {
-        var listValue = document.getElementById('todoList').innerHTML;
-        var addList = document.getElementById('addTodoList');
-        var item = document.createElement('li');
-
-        item.innerText = listValue;
-        item.classList.add('list-group-item');
-
-        var removeButton = document.createElement('button');
-        removeButton.innerText = 'Remove';
-        removeButton.classList.add('btn', 'btn-danger', 'btn-sm');
-        removeButton.addEventListener('click', removeTodo);
-
-        item.appendChild(removeButton);
-        addList.appendChild(item);
-    }
-</script>
 </body>
 </html>

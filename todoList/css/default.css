@@ -1,0 +1,17 @@
+        footer{
+            width: 100nw;
+            position: auto;
+            bottom:0;
+            text-align: center;
+        }
+        #addList{
+
+        }
+        h1{
+            text-align: center;
+        }
+        .list-group-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
