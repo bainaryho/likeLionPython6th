@@ -11,7 +11,7 @@
     <link rel="stylesheet" type="text/css" href = "css/default.css">
     <script src="js/default.js"></script>
 </head>
-<body>
+<body onload="getTodo()">
 <header>
     <h1>ToDo List</h1>
 </header>
@@ -21,7 +21,6 @@
             <div class="col-sm-10">
                 <div contenteditable="true"
                      id="todoList"
-                     oninput="saveTodo()"
                      class="form-control"
                 >
                 </div>

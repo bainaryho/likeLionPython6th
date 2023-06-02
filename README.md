@@ -15,6 +15,8 @@
 - python main.py 생성
 
 ## 6월 1일
+- bootstrap 실습
+- todo list 제작
 
 ## 6월 2일
 - todo list 코드 리뷰 
