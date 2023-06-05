@@ -1,18 +1,16 @@
-#멤버 in 연산자
-st1 = "Welcome to 멋쟁이 사자"
-print("to" in st1) #True
+#암시적 타입 변환
+a = 5
+b = 2
+value = a/b
+print(value)
+print(type(value))
 
-st2 = "Welcome top 멋쟁이 사자"
-print("to" in st2) #True
+j = 'Hello'
+k = 'like lion'
+value = j+k
+print(value) #Hellolike lion
+print(type(value)) #<class 'str'>
 
-st3 = "Welcome top 멋쟁이 사자"
-print("et" in st3) #False
-
-#is 연산자
-a = 10
-b = 10
-print(a is b) #True
-c = 10.0
-print(a is c) #False
-d = 10.0
-print(c is d) #True
+# u = 10
+# q = '20'
+# print(u+q) #error!
