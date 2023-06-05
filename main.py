@@ -1,33 +1,31 @@
-#덧셈
-a = 4
-b = 2
-total = a+b
-print('total = a+b: ', total) #total = a+b:  6
-
-#뺄셈
-a = 4
-b = 2
-total = a-b
-print('total = a-b: ', total) #total = a-b:  2
-
-#나눗셈
-print('a/b: ',a/b) #a/b:  2.0
-print('a/b: ',type(a/b)) #a/b:  <class 'float'>
-
-#나머지 연산자
-a = 5
-b = 2
-print('a%b: ',a%b) #a%b:  1
-
-#거듭 제곱
-print('a**b: ',a**b) #a**b:  25
-
-#몫 연산자
-print('a//b: ',a//b) #a//b:  2
-
-#비교 연산자
+#논리 연산자
 a=5
 b=2
-print('a<b: ', a<b) #a<b:  False
+c=3
+d=200
 
-print('a<=b: ', a<=b) #a<=b:  False
+print('AND연산자')
+print('a > b and a < c: ', a > b and a < c) #a > b and a < c:  False
+
+print('OR연산자')
+print('a > b or a < c: ', a > b or a < c) #a > b or a < c:  True
+
+print('NOT연산자')
+print('not(a < b): ', not(a < b)) #not(a < b):  True
+
+#할당 연산자 =
+a = 10
+b = 20
+m = 15
+
+y = a + b
+print(y) #30
+
+m += 10
+print(m) #25 #15+10
+
+m **= 2
+print(m) #625 #25의제곱
+
+m //= 10
+print(m) #62 #625를10으로 나눈 몫
