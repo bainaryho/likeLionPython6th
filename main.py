@@ -1,17 +1,33 @@
-#변수 선언
-a = 10
-b = 3.14
-c = "Hellow, World!"
-d = [1, 2, 3]
-e = (4, 5, 6)
-f = {7, 8, 9}
-g = {"apple":1, "banana":2, "orange":3}
+#덧셈
+a = 4
+b = 2
+total = a+b
+print('total = a+b: ', total) #total = a+b:  6
 
-#데이터 타입 출력
-print("a:", type(a)) #<class 'int'> 정수
-print("b:", type(b)) #<class 'float'> 실수
-print("c:", type(c)) #<class 'str'> 문자열
-print("d:", type(d)) #<class 'list'> 리스트
-print("e:", type(e)) #<class 'tuple'> 순서쌍(튜플)
-print("f:", type(f)) #<class 'set'> 집합
-print("g:", type(g)) #<class 'dict'> 딕셔너리
+#뺄셈
+a = 4
+b = 2
+total = a-b
+print('total = a-b: ', total) #total = a-b:  2
+
+#나눗셈
+print('a/b: ',a/b) #a/b:  2.0
+print('a/b: ',type(a/b)) #a/b:  <class 'float'>
+
+#나머지 연산자
+a = 5
+b = 2
+print('a%b: ',a%b) #a%b:  1
+
+#거듭 제곱
+print('a**b: ',a**b) #a**b:  25
+
+#몫 연산자
+print('a//b: ',a//b) #a//b:  2
+
+#비교 연산자
+a=5
+b=2
+print('a<b: ', a<b) #a<b:  False
+
+print('a<=b: ', a<=b) #a<=b:  False
