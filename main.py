@@ -1,7 +1,3 @@
-name = input('your name: ') #your name: lee
-print(name) #lee
-
-mobile = input('your number: ') #your number: 010
-print(type(mobile)) # <class 'str'>
-mb = int(mobile)
-print(type(mb)) # <class 'int'>
+#이스케이프문자
+print("He said, \"hi there\"") #He said, "hi there"
+print('It\'s beautiful day!') #It's beautiful day!
