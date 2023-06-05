@@ -1,31 +1,18 @@
-#논리 연산자
-a=5
-b=2
-c=3
-d=200
+#멤버 in 연산자
+st1 = "Welcome to 멋쟁이 사자"
+print("to" in st1) #True
 
-print('AND연산자')
-print('a > b and a < c: ', a > b and a < c) #a > b and a < c:  False
+st2 = "Welcome top 멋쟁이 사자"
+print("to" in st2) #True
 
-print('OR연산자')
-print('a > b or a < c: ', a > b or a < c) #a > b or a < c:  True
+st3 = "Welcome top 멋쟁이 사자"
+print("et" in st3) #False
 
-print('NOT연산자')
-print('not(a < b): ', not(a < b)) #not(a < b):  True
-
-#할당 연산자 =
+#is 연산자
 a = 10
-b = 20
-m = 15
-
-y = a + b
-print(y) #30
-
-m += 10
-print(m) #25 #15+10
-
-m **= 2
-print(m) #625 #25의제곱
-
-m //= 10
-print(m) #62 #625를10으로 나눈 몫
+b = 10
+print(a is b) #True
+c = 10.0
+print(a is c) #False
+d = 10.0
+print(c is d) #True
