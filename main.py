@@ -1,18 +1,44 @@
-# #소 -> 대문자
-# s = 'hello'
-# s1 = 'Hello World!'
-# print(s.upper())
-# print(s1.lower())
-# print(s1.swapcase())
-# print(s1.title())
-# print(s1.islower())
-# print(s1.istitle())
-# print(s1.isdigit())
-# print(s1.isalpha())
+print('인자가 없는 함수')
+def disp():
+    name = '멋쟁이 사자'
+    print("Welcome to", name)
+disp()
 
-s="Hello, World!"
-print(s.replace("world".title(),"there"))
-split_s = s.split(',')
-print(split_s)
-print(''.join(split_s))
-#문자열을 나누고 합치는 split 과 join !
+print('인자가 1개인 함수')
+def disp1(name):
+    print("Welcome to", name)
+disp1('멋쟁이 사자')
+
+print('인자가 2개인 함수')
+def disp2(str1,name):
+    print(str1, name)
+disp2('Welcome to','멋쟁이 사자')
+
+print('가변 매개 함수')
+def disp3(*keywords):
+    for i in keywords:
+        print(i,end=' ')
+disp3('welcome','to','멋쟁이','사자')
+
+print('\nadd 함수만들기')
+def add(y):
+    x = 10.2334
+    print(x + y)
+    print(f"Formatted Output {x+y:10.2f}")
+    #{x+y:.2f} .2f앞에 나오는 숫자는 출력하는 공간의 크기, 10으로하면 차이가 보이네
+add(20)
+
+print('add return만들기')
+def add1():
+    x = 10
+    y = 20
+    return x+y
+print(add1())
+
+def add(y):
+    x = 10
+    c = x + y
+    d = y - x
+    return c, d, 30
+print(add(10))
+
