@@ -1,37 +1,42 @@
-# #while 문
-# while 1:
-#     a = int(input('Enter Menu Number: '))
-#     if a == 0:
-#         break
-#     print("a: ",a)
-# else:
-#     print("else")
+# import array
+# stu_roll = array.array('i',[101,102,103,104,105])
+#
+# for e in stu_roll:
+#     print(e)
+#
+from array import *
 
-# a = 2
-# while a< 20:
-#     print(a)
-#     a+=2
-# print("gg")
+stu_roll = array('i',[101,102,103,104,105])
+n = len(stu_roll)
+i = 0
+while i < n :
+    print(stu_roll[i])
+    i += 1
 
-# i = 0
-# while True:
-#     i+=1
-#     print(i)
-#     if i == 5:
-#         break
+print('Array After Insert')
+stu_roll.insert(1, 106)
+stu_roll.insert(3, 107)
+n = len(stu_roll)
+i = 0
+while i < n :
+    print(stu_roll[i])
+    i += 1
 
-# for i in range(1, 10, 2):
-#     print(i)
 
-# for i in range(-1, -10, -2):
-#     print(i)
+print('요소삭제')
+stu_roll.remove(101)
+n = len(stu_roll)
+i = 0
+while i < n :
+    print(stu_roll[i])
+    i += 1
 
-# r = range(5,0,-1)
-# print(type(r))
+print('배열 pop() 실습')
+element = stu_roll.pop()
+n = len(stu_roll)
+i = 0
+print('pop data : ',element)
+while i < n :
+    print(stu_roll[i])
+    i += 1
 
-st = '멋쟁이 사자'
-for ch in st:
-    print(ch)
-else:
-    print("Else")
-print('코드 종료')
