@@ -1,22 +1,27 @@
-print('ㅇ거듭제곱함수')
-def pw(x,y):
-    z = x**y
-    print(z)
-pw(2,5)
+# def add(**num):
+#     z = num['a'] + num['b'] + num['c']
+#     print('addition: ',z)
+# add(a=5,b=2,c=4,d=6)
+#
+# #지역변수와 전역변수
+# i = 1
+# def plus1():
+#     b = i + 1
+#     print('i =', b)
+# plus1()
 
-print('ㅇ아규먼트 2개인 함수')
-def show(name,age):
-    print(f"Name:{name} Age:{age}")
-show('이진호','24')
+a=50
+def show():
+    a = 10
+    print('show a:', a)
 
-print('함수실습2')
-def add(*num):
-    z = num[0] + num[1] + num[2]
-    print('add : ',z)
-add('5','2','4')
+show()
+print(a)
 
-print('함수실습3')
-def add(x, *num):
-    z = x + num[0] + num[1]
-    print('Add x *: ',z)
-add(5, 2, 4, 5)
+def show2():
+    global a
+    print('show2-a',a)
+    a = 20
+    print('show2-a2',a)
+show2()
+print('a:',a)
