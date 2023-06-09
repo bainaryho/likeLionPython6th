@@ -1,7 +1,6 @@
-file_object = open('example.txt','r')
-
-content = file_object.read()
-
-print(content)
-
-file_object.close()
+with open('example.txt', 'r+') as f:
+    content = """ where
+    is my
+    game
+    """
+    f.write(content)
