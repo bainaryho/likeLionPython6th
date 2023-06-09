@@ -1,20 +1,23 @@
-class Mobile:
-    fp = 'yes'
+class Vector:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
 
-realme = Mobile()
-redme = Mobile()
-geek = Mobile()
+    def __add__(self, other):
+        return Vector(self.x + other.x, self.y + other.y)
 
-print(Mobile.fp)
-print(redme.fp)
-print(realme.fp)
+    def __str__(self):
+        return f'Vector({self.x},{self.y})'
 
-Mobile.fp = 'no' #클래스 변수에 직접 접근 가능
-print(Mobile.fp)
-print(redme.fp) #클래스로 생성된 객체들도 변경됨
-print('----------------')
-realme.fp = 'not work'
-print(Mobile.fp)
-print(redme.fp)
-print(realme.fp)
-print(type(realme))
+
+a = Vector(1, 5)
+b = Vector(10, 10)
+print(a)
+print(b)
+c = a+b
+print(c)
+
+
+
+
+
