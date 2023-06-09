@@ -1,23 +1,17 @@
-class Vector:
-    def __init__(self, x, y):
-        self.x = x
-        self.y = y
-
-    def __add__(self, other):
-        return Vector(self.x + other.x, self.y + other.y)
-
-    def __str__(self):
-        return f'Vector({self.x},{self.y})'
+import time
+from datetime import datetime
+from datetime import date
 
 
-a = Vector(1, 5)
-b = Vector(10, 10)
-print(a)
-print(b)
-c = a+b
-print(c)
+print('time.ctime() : ', time.ctime())  # 현재 시간
 
+df = datetime(year=2023, month=5, day=5, hour=5, minute=5)
+print('datetime : ', df, '| type(df) : ', type(df))
+now_date = datetime.now()
+print('datetime.now() : ', now_date)
 
+d = date(year=2023, month=6, day=1)
+print(d) #date만
 
-
-
+today_date = date.today()
+print(today_date)
