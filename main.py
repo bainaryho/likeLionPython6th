@@ -1,16 +1,17 @@
-class Vehicle:
-    def __init__(self, make, model, year):
-        self.make = make
-        self.model = model
-        self.year = year
+class Engine:
+    def start(self):
+        return "Start"
+    def stop(self):
+        return "Stop"
 
-    def start_engine(self):
-        return "the engine is running!"
+class Wheels:
+    def rotate(self):
+        return "wheels are rotating"
 
-class Car(Vehicle):
-    def start_engine(self):
-        return super().start_engine() + "It's a engine"
+#다중 상속
+class Car(Engine, Wheels):
+    pass
 
-my_car = Car('도요타','Corolla',2020)
-
-print(my_car.start_engine()) #the engine is running!It's a engine
+my_car = Car()
+print(my_car.start())
+print(my_car.rotate())
