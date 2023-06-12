@@ -1,13 +1,12 @@
-a = ['a1','b2','c3']
-for i in range(len(a)):
-    print(i,a[i])
+words = ['apple', 'bat', 'bar', 'atom', 'book']
+by_letters = {}
 
-i = 0
-p_list = []
-for n in a:
-    p_list.append([i,n])
-    i += 1
-print(p_list)
+for word in words:
+    letter = word[0]
+    if letter not in by_letters:
+        by_letters[letter] = [word]
+    else:
+        by_letters[letter].append(word)
 
-for i,v in enumerate(a):
-    print(i,v)
+    print(by_letters)
+
