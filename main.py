@@ -1,16 +1,22 @@
-import os
+class Car:
+    wheels = 4
 
-filename = 'example.txt'
+    def __init__(self, make, model, color):
+        self.make = make
+        self.model = model
+        self.color = color
 
-# if os.path.isfile(filename):
-#     print(f'{filename}이 존재')
-# else:
-#     print(f'{filename}이 없음')
+    # Method
+    def drive(self):
+        return f"the {self.model} is moving"
 
-file_object = open('list_example.txt','w')
-content_list = ['python','java,','c++','javascript']
+    def stop(self):
+        return f'the {self.model} is stop'
 
-for i in content_list:
-    file_object.write(i + '\n')
 
-file_object.close()
+my_car = Car(make='Kia', color='Blue', model='Morning')
+
+print(my_car.make)
+
+print(my_car.drive())
+print(my_car.stop())
