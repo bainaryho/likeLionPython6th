@@ -1,17 +1,4 @@
-class Engine:
-    def start(self):
-        return "Start"
-    def stop(self):
-        return "Stop"
+from MyApp.Handlers.text_handler import handle_text
 
-class Wheels:
-    def rotate(self):
-        return "wheels are rotating"
-
-#다중 상속
-class Car(Engine, Wheels):
-    pass
-
-my_car = Car()
-print(my_car.start())
-print(my_car.rotate())
+input_text = "py package pratice"
+handle_text(input_text)
