@@ -1,33 +1,44 @@
-# class Solution:
-#     def isValid(self, s: str) -> bool:
-#         stack = []
-#         mapping = {
-#             ')': '(',
-#             '}': '{',
-#             ']': '['
-#         }
+# graph = {
+#     'A' : ['B', 'C'],
+#     'B' : ['A', 'D', 'E'],
+#     'C' : ['A', 'F'],
+#     'D' : ['B'],
+#     'E' : ['B' , 'F'],
+#     'F' : ['C', 'E']
+# }
 #
-#         for char in s:
-#             # 스택 마지막 요소 꺼내서 확인, 비어있으면 #반환
-#             if char in mapping:
-#                 top_element = stack.pop() if stack else '#'
+# visited = set()
 #
-#             else:
-#                 stack.append(char)
-#
-#         return not stack
+# def dfs(start_node):
+#     stack = [start_node]
+#     while stack:
+#         node = stack.pop()
+#         if node not in visited:
+#             print(node, end=' ')
+#             visited.add(node)
+#             stack.extend(reversed(graph[node]))
+# ex_node = 'A'
+# dfs(ex_node)
 
-class Solution:
-    def removeDuplicateLetters(self, s: str) -> str:
-        last_occurrence = {c: i for i, c in enumerate(s)}
-        stack = []
-        in_stack = set()
+from collections import deque
+graph = {
+    'A' : ['B', 'C'],
+    'B' : ['A', 'D', 'E'],
+    'C' : ['A', 'F'],
+    'D' : ['B'],
+    'E' : ['B' , 'F'],
+    'F' : ['C', 'E']
+}
 
-        for i, c in enumerate(s):
-            if c not in in_stack:
-                while stack and c < stack[-i] and i < last_occurrence[stack[-1]]:
-                    in_stack.remove(stack.pop())
-                stack.append(c)
-                in_stack.add(c)
+visited = set() #방문 노드를 저장할 집합
 
-        return ''.join()
+def bfs(start_node):
+    queue = deque([start_node])
+    while queue:
+        node = queue.popleft()
+        if node not in visited:
+            print(node, end=' ')
+            visited.add(node)
+            queue.extend(graph[node])
+ex_node = 'A'
+bfs(ex_node)
