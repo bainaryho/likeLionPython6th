@@ -3,15 +3,23 @@ from django.contrib import admin
 from polls.models import Question, Choice
 
 
+class ChoiceInline(admin.StackedInline):
+    model = Choice
+    extra = 2
+
+
 # Register your models here.
-
 class QuestionAdmin(admin.ModelAdmin):
-    # fields = ['pub_date', 'question_text'] #filedset을 만들어 줌
-    fieldsets = [  # 수동으로 커스터 마이징. fields랑 동시에 안씀
-        ('Question Statemanet', {'fields': ['question_text']}),
-        ('Date Infomation', {'fields': ['pub_date']}),
+    # fields = ['pub_date', 'question_text']
+    fieldsets = [
+        ('Question Statement', {'fields': ['question_text']}),
+        ('Date Information', {'fields': ['pub_date']})
     ]
+    inlines = [ChoiceInline]
+    list_display = ('question_text', 'pub_date')
+    list_filter = ['pub_date']
+    search_fields = ['question_text']
 
 
-admin.site.register(Question, QuestionAdmin)  # 모델 클래스를 주면 알아서 긁어서 admin site에 넣어준다
+admin.site.register(Question, QuestionAdmin)
 admin.site.register(Choice)
