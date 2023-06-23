@@ -30,17 +30,18 @@ ALLOWED_HOSTS = [
 ]
 
 
+
 # Application definition
 
 INSTALLED_APPS = [
-    'polls.apps.PollsConfig',
-
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
+    "books.apps.BooksConfig",
+    "polls.apps.PollsConfig",
+    "django.contrib.admin",
+    "django.contrib.auth",
+    "django.contrib.contenttypes",
+    "django.contrib.sessions",
+    "django.contrib.messages",
+    "django.contrib.staticfiles",
 ]
 
 MIDDLEWARE = [
@@ -58,8 +59,10 @@ ROOT_URLCONF = 'myproject.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [
-            'polls/templates/polls'
+        "DIRS": [
+            'polls/templates/polls',
+            'books/templates/books',
+            'templates',
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -127,3 +130,25 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatter': {
+        'console': {
+            'format': '%(asctime)s %(levelname)s %(message)s',
+        }
+    },
+    'handler': {
+        'console': {
+            'class': 'logging.StreamHandler',
+            'formatter': 'console'
+        },
+    },
+    'logger': {
+        'django': {
+            'level': 'INFO',
+            'handlers': ['console']
+        }
+    }
+}
