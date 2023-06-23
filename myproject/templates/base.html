@@ -9,18 +9,20 @@
         {% block title %}My Site{% endblock %}
     </title>
 </head>
-<body>
-<div id="sidebar">
+<body style="display: flex; flex-direction: row; align-items: center">
+
+<div id="sidebar" style="margin-left : 3rem ">
     {% block sidebar %}
         <ul>
             <li><a href="/">Project_Home</a></li>
             <li><a href="/admin">Admin</a></li>
         </ul>
-
     {% endblock sidebar %}
 </div>
-<div id="content">
+
+<div id="content" style="margin-left : 3rem">
     {% block content %}{% endblock %}
 </div>
+
 </body>
 </html>
