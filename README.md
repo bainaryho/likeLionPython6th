@@ -35,3 +35,6 @@
 - python 클래스 실습
 - python 다중 상속 실습
 
+## 6월 23일
+- django App 완성
+
