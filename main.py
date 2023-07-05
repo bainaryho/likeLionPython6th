@@ -1,29 +1,25 @@
-from http.server import HTTPServer, BaseHTTPRequestHandler
+coffee_menu = {
+    '1' : {'name':'에스프레소', 'price':3000},
+    '2' : {'name':'아메리카노', 'price':4000},
+    '3' : {'name':'라떼', 'price':5000},
+    '4' : {'name':'카푸치노', 'price':5000},
+}
 
+total_price = 0
 
-# class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
-#     def do_GET(self):
-#         self.send_response(200, 'OK')
-#         self.send_header('Content-Type', 'text/plain')
-#         self.end_headers()
-#         self.wfile.write(b"Hello World")
-#
-#
-# server = HTTPServer(("", 8080), SimpleHTTPRequestHandler)
-# server.serve_forever()
+def print_menu():
+    print("\n=== 커피 주문 시스템 ===")
+    for id, coffee in coffee_menu.items():
+        print(f"{id}. {coffee['name']} - {coffee['price']}")
 
-from wsgiref.simple_server import make_server
-
-def application(environ, start_response):
-    response_body = b"Hello, World!"
-    status = "200 OK"
-    headers = [("Content-Type", "text/plain")]
-
-    start_response(status, headers)
-    return [response_body]
-
-
-if __name__ == '__main__':
-    httpd = make_server("", 8000, application)
-    print("Running...")
-    httpd.serve_forever()
+while True:
+    print_menu()
+    choice = input("원하는 메뉴를 선택하세요: ")
+    if choice in coffee_menu:
+        total_price += coffee_menu[choice]['price']
+        print(f"{coffee_menu[choice]['name']}을(를) 주문하셨습니다.\n 현재까지의 총 금액은 {total_price}원 입니다.")
+    elif choice == '5':
+        print(f"\n주문을 종료합니다. 총 주문금액은 {total_price}원 입니다.")
+        break
+    else:
+        print("\n 잘못된 선택입니다. 다시 선택해주세요.")
