@@ -23,3 +23,6 @@ while True:
         break
     else:
         print("\n 잘못된 선택입니다. 다시 선택해주세요.")
+
+
+        #데이터베이스 추가
